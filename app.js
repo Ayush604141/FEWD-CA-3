@@ -1,7 +1,6 @@
 // Getting the required Elements from HTML.
 const Button = document.getElementById('searchbutton');
 const ModalBox = document.getElementById('ingredient');
-var ButtonClickCount = 0;
 
 // Implementing Random image onload and onclick Ingredient display.
 window.onload = () => {
@@ -92,13 +91,13 @@ Button.onclick = () =>
                     }
                 }
             })
-            }).catch((e)=>{
-                GridElement.style.display = 'block';
-                GridElement.style.textAlign = 'center';
-                GridElement.innerHTML = 'No Search Results.';
-                GridElement.style.fontFamily = "'Martian Mono', monospace";
-                GridElement.style.fontSize = '30px';
-                console.log('No Results.');
-            })
-        }
+        }).catch((e)=>{
+            GridElement.style.display = 'block';
+            GridElement.style.textAlign = 'center';
+            GridElement.innerHTML = 'No Search Results.';
+            GridElement.style.fontFamily = "'Martian Mono', monospace";
+            GridElement.style.fontSize = '30px';
+            console.log('No Results.');
+        })
     }
+}
