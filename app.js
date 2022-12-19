@@ -16,7 +16,7 @@ window.onload = () => {
         RandomFood.append(NewFoodImage);
         RandomFood.append(NewFoodName);
         NewFoodImage.onclick = () => {
-            ModalBox.innerHTML = "";
+            ModalBox.innerHTML = "Required Ingredients are: <br><br>";
             for(let i=1;i<=20;i++){
                 let key = `strIngredient${i}`;
                 if(res.data.meals[0].hasOwnProperty(key)){
@@ -68,7 +68,7 @@ Button.onclick = () =>
                 FoodElement.append(FoodImage);
                 GridElement.append(FoodElement);
                 FoodImage.onclick = () => {
-                    ModalBox.innerHTML = "";
+                    ModalBox.innerHTML = "Required Ingredients are: <br>";
                     for(let i=1;i<=20;i++)
                     {
                         let key = `strIngredient${i}`;
