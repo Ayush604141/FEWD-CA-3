@@ -52,6 +52,7 @@ Button.onclick = () =>
         alert('Please input a food type.')
     }
     else{
+        alert('Scroll down for results');
         GridElement.innerHTML = "";
         axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${Value}`).then((res)=>{
             let Data = res.data.meals;
