@@ -1,0 +1,250 @@
+/* Importing necessary fonts. */
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap');
+
+
+/* Giving Background to the page. */
+html{
+    background-color: rgb(255, 255, 131);
+}
+
+
+/* Styling the header of the page. */
+#container{
+    position: relative;
+    left: 15%;
+    width: 67%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+}
+#container h2{
+    margin-top: 3%;
+    font-size: 36px;
+    font-family: 'La Belle Aurore', cursive;
+    color: white;
+}
+#container img{
+    border-radius: 35%;
+    margin-top: 1%;
+}
+
+
+/* Styling the search area. */
+#search-bar{
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.search{
+    height: 50px;
+    width: 50%;
+    border-radius: 4px;
+    font-size: 48px;
+    color: darkblue;
+    background-color: rgba(17, 224, 224, 0.336);
+}
+.search-icon{
+    height: 75px;
+    width: 75px;
+    margin-left: 15px;
+    background-color: rgb(255, 255, 131);
+    border: none;
+}
+.search-icon img{
+    transition: ease-in-out 0.2s;
+}
+.search-icon img:hover{
+    transform: scale(1.3);
+}
+
+/* Styling the Random Food displayed. */
+#random-food{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bolder;
+    font-family: 'Martian Mono', monospace;
+    margin-top: 1%;
+}
+#random-food img{
+    transition: ease-out 0.4s;
+}
+#random-food img:hover{
+    transform: scale(1.1);
+}
+
+/* Styling the food grid which would be displayed on search. */
+#FoodGrid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 40px;
+    font-family: 'Martian Mono', monospace;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+}
+#FoodElement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 450px;
+    /* background-color: rgba(0, 0, 0, 0.4); */
+}
+#FoodElement h2:hover{
+    color: rgb(223, 65, 54);
+    cursor: pointer;
+}
+#FoodElement img{
+    transition: ease-in-out 0.4s;
+}
+#FoodElement img:hover{
+    transform: scale(1.025);
+}
+
+/* Styling ingredient modal */
+#ingredientModal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.ingredient{
+    display: flex;
+    justify-content: space-evenly;
+    background: url(./assets/Modalbg.jpg);
+    margin: 5% auto;
+    padding: 20px;
+    border: 4px solid #888;
+    width: 40%;
+    min-height: 50%;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    font-size: 28px;
+    font-weight: lighter;
+    font-family: 'Rubik Gemstones', cursive;
+}
+.ingredient img{
+    position: relative;
+    top: 100px;
+    left: 15px;
+}
+
+/* Making the design responsive */
+@media screen and (max-width: 700px) {
+    #container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        left: 0px;
+        margin: 0px;
+    }
+    #container img{
+        width: 30%;
+    }
+    #container h2{
+        font-size: large;
+    }
+    #search-bar{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 2%;
+    }
+    .search{
+        height: 25px;
+        width: 60%;
+        font-size: large;
+    }
+    #random-food{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        font-size: large;
+    }
+    #random-food img{
+        width: 100%;
+    }
+    #FoodGrid{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .ingredient{
+        display: flex;
+        width: 50%;
+        height: 60%;
+        font-size: smaller;
+    }
+    .ingredient img{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width: 974px){
+    #container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        left: 0px;
+        margin: 0px;
+    }
+    #container img{
+        width: 18%;
+    }
+    #container h2{
+        font-size: large;
+    }
+    #search-bar{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 1%;
+    }
+    .search{
+        height: 25px;
+        width: 80%;
+        font-size: large;
+    }
+    #random-food img{
+        width: 80%;
+    }
+    #FoodGrid{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #FoodElement img{
+        width: 100%;       
+    }
+    #FoodElement h2{
+        text-align: center;
+    }
+    .ingredient{
+        display: flex;
+        width: 50%;
+        height: 60%;
+        font-size: smaller;
+    }
+}

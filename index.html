@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Food Suggestion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <img src="./assets/Random-logo.jpg" height="100px" alt="Site-Logo">
+        <h2> Confused? Let us help you choose your meal!</h2>
+    </div>
+    <div id="search-bar">
+        <input type="text" class="search" id="foodsearch" placeholder="Enter food preference here">
+        <button class="search-icon" id="searchbutton"><img src="./assets/search icon.png" height="50px" alt="Icon"></button>
+    </div>
+    <div id="random-food">
+        <h2>Today's suggestion</h2>
+    </div>
+    <div id="ingredientModal">
+        <div id="ingredient" class="ingredient">
+        </div>
+    </div>
+    <div id="FoodGrid">
+    </div>
+    <script src="./app.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>
